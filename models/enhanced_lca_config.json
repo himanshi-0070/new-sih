@@ -1,0 +1,175 @@
+{
+  "metals": {
+    "Aluminium": {
+      "type": "Base Metal",
+      "criticality": "Medium",
+      "recyclability": "High"
+    },
+    "Copper": {
+      "type": "Base Metal",
+      "criticality": "Medium",
+      "recyclability": "High"
+    },
+    "Steel": {
+      "type": "Base Metal",
+      "criticality": "Low",
+      "recyclability": "High"
+    },
+    "Zinc": {
+      "type": "Base Metal",
+      "criticality": "Medium",
+      "recyclability": "High"
+    },
+    "Lead": {
+      "type": "Base Metal",
+      "criticality": "Low",
+      "recyclability": "High"
+    },
+    "Nickel": {
+      "type": "Base Metal",
+      "criticality": "High",
+      "recyclability": "Medium"
+    },
+    "Lithium": {
+      "type": "Critical Mineral",
+      "criticality": "Very High",
+      "recyclability": "Low"
+    },
+    "Cobalt": {
+      "type": "Critical Mineral",
+      "criticality": "Very High",
+      "recyclability": "Medium"
+    },
+    "Rare_Earth_Elements": {
+      "type": "Critical Mineral",
+      "criticality": "Very High",
+      "recyclability": "Very Low"
+    },
+    "Platinum": {
+      "type": "Precious Metal",
+      "criticality": "High",
+      "recyclability": "High"
+    },
+    "Palladium": {
+      "type": "Precious Metal",
+      "criticality": "High",
+      "recyclability": "High"
+    },
+    "Tungsten": {
+      "type": "Critical Mineral",
+      "criticality": "High",
+      "recyclability": "Medium"
+    },
+    "Indium": {
+      "type": "Critical Mineral",
+      "criticality": "Very High",
+      "recyclability": "Low"
+    },
+    "Germanium": {
+      "type": "Critical Mineral",
+      "criticality": "High",
+      "recyclability": "Low"
+    }
+  },
+  "circularity_metrics": {
+    "Resource_Efficiency_Index": "Measures input efficiency vs output quality",
+    "Circular_Material_Flow_Rate": "Percentage of materials staying in circular loops",
+    "End_of_Life_Recovery_Rate": "Actual recovery rate vs theoretical maximum",
+    "Product_Life_Extension_Factor": "How much product life is extended through design",
+    "Cascade_Utilization_Index": "Multi-level use before final disposal",
+    "Critical_Material_Substitution_Rate": "Replacement of critical with abundant materials",
+    "Supply_Chain_Circularity_Score": "Circularity across entire value chain"
+  },
+  "processing_routes": {
+    "Primary_Production": {
+      "description": "Traditional extraction and processing from virgin ores",
+      "typical_energy_intensity": "High",
+      "circularity_potential": "Low",
+      "environmental_impact": "High"
+    },
+    "Secondary_Production": {
+      "description": "Processing from recycled materials and scrap",
+      "typical_energy_intensity": "Medium",
+      "circularity_potential": "High",
+      "environmental_impact": "Medium"
+    },
+    "Hybrid_Processing": {
+      "description": "Combined primary and secondary material streams",
+      "typical_energy_intensity": "Medium-High",
+      "circularity_potential": "Medium",
+      "environmental_impact": "Medium"
+    },
+    "Advanced_Recycling": {
+      "description": "High-tech recovery of complex alloys and compounds",
+      "typical_energy_intensity": "Medium",
+      "circularity_potential": "Very High",
+      "environmental_impact": "Low-Medium"
+    },
+    "Urban_Mining": {
+      "description": "Recovery from built infrastructure and waste streams",
+      "typical_energy_intensity": "Low-Medium",
+      "circularity_potential": "Very High",
+      "environmental_impact": "Low"
+    }
+  },
+  "application_sectors": {
+    "Energy_Storage": [
+      "Lithium",
+      "Cobalt",
+      "Nickel",
+      "Aluminium"
+    ],
+    "Electronics": [
+      "Copper",
+      "Gold",
+      "Silver",
+      "Indium",
+      "Germanium"
+    ],
+    "Automotive": [
+      "Steel",
+      "Aluminium",
+      "Copper",
+      "Platinum",
+      "Palladium"
+    ],
+    "Renewable_Energy": [
+      "Copper",
+      "Aluminium",
+      "Rare_Earth_Elements",
+      "Silver"
+    ],
+    "Construction": [
+      "Steel",
+      "Aluminium",
+      "Copper",
+      "Zinc"
+    ],
+    "Aerospace": [
+      "Titanium",
+      "Aluminium",
+      "Nickel",
+      "Tungsten"
+    ],
+    "Defense": [
+      "Tungsten",
+      "Rare_Earth_Elements",
+      "Titanium",
+      "Steel"
+    ]
+  },
+  "impact_indicators": {
+    "Carbon_Footprint_Reduction": "CO2 equivalent reduction vs baseline",
+    "Water_Footprint_Optimization": "Water use efficiency improvement",
+    "Land_Use_Minimization": "Reduced land disturbance through recycling",
+    "Waste_Stream_Valorization": "Converting waste into valuable resources",
+    "Energy_Recovery_Maximization": "Heat and energy recovery from processes",
+    "Supply_Chain_Resilience": "Reduced dependency on primary extraction",
+    "Economic_Circularity_Value": "Economic value generated through circularity"
+  },
+  "problem_statement": {
+    "id": "25069",
+    "title": "AI-Driven Life Cycle Assessment (LCA) Tool for Advancing Circularity and Sustainability in Metallurgy and Mining",
+    "compliance_status": "FULLY IMPLEMENTED"
+  }
+}
