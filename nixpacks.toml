@@ -10,7 +10,10 @@ cmds = [
 ]
 
 [phases.build]
-cmds = ["echo 'Build completed successfully!'"]
+cmds = [
+    "chmod +x start.sh",
+    "echo 'Build completed successfully!'"
+]
 
 [start]
-cmd = "streamlit run app/app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true --server.enableCORS false --server.enableXsrfProtection false"
+cmd = "./start.sh"

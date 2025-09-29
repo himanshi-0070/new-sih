@@ -24,12 +24,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy application code
 COPY . .
 
-# Expose port
+# Make scripts executable
+RUN chmod +x start.sh start.py
+
+# Expose port (Railway will set PORT env var)
 EXPOSE $PORT
 
-# Health check
-HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 \
-    CMD curl -f http://localhost:$PORT/_stcore/health || exit 1
-
-# Start command
-CMD streamlit run app/app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true --server.enableCORS false --server.enableXsrfProtection false
+# Start command using Python startup script (more reliable)
+CMD ["python", "start.py"]
