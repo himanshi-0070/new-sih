@@ -8,17 +8,11 @@ WORKDIR /app
 ENV PYTHONUNBUFFERED=1
 ENV PYTHONDONTWRITEBYTECODE=1
 
-# Install system dependencies including git and git-lfs
+# Install system dependencies (minimal set)
 RUN apt-get update && apt-get install -y \
     gcc \
     g++ \
-    git \
-    curl \
     && rm -rf /var/lib/apt/lists/*
-
-# Install Git LFS
-RUN curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
-RUN apt-get install git-lfs
 
 # Copy requirements first for better caching
 COPY requirements.txt .
@@ -31,13 +25,16 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Make scripts executable
-RUN chmod +x start.sh start.py setup-lfs.sh
+RUN chmod +x start.sh start.py
 
-# Try to setup Git LFS (may fail in some environments)
-RUN ./setup-lfs.sh || echo "Git LFS setup failed - using fallback models"
+# Create models directory if it doesn't exist
+RUN mkdir -p models
+
+# Note: Git LFS files will be handled by the robust fallback system
+# No need to install git-lfs as we have demonstration models
 
 # Expose port (Railway will set PORT env var)
 EXPOSE $PORT
 
-# Start command using Python startup script (more reliable)
+# Start command using Python startup script
 CMD ["python", "start.py"]

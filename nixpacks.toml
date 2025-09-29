@@ -6,14 +6,15 @@ nixPkgs = ["python311"]
 [phases.install]
 cmds = [
     "pip install --upgrade pip setuptools wheel",
-    "pip install -r requirements.txt"
+    "pip install -r requirements.txt",
+    "mkdir -p models"
 ]
 
 [phases.build]
 cmds = [
-    "chmod +x start.sh",
-    "echo 'Build completed successfully!'"
+    "chmod +x start.py",
+    "echo 'Build completed - using demonstration models for Railway deployment'"
 ]
 
 [start]
-cmd = "./start.sh"
+cmd = "python start.py"
