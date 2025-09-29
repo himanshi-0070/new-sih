@@ -347,3 +347,5 @@ The trained model predicts 6 indicators:
 **Circularity Indicators:**
 - Circularity_Index
 - Recycled_Content_pct
+#   n e w - s i h  
+ 
